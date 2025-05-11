@@ -24,11 +24,23 @@ switch (opcao) {
          while (getchar() != '\n');
          printf("Entrada invalido. Deve ser entre 1 e 50.\n");
         continue; //Volta ao inicio do loop
-            if (n < 1 || n > 50) {
-             
+        }
+         //Verificar se está no intervalo permitido
+        if (n < 1 || n > 50) {
+            printf("Número inválido. ");
+        } 
+        else {
+             break; //Sai do loop se a entrada for valida conforme pedido. 
             }
-            // Código da sequência de Fibonacci aqui
-            break;
+     } 
+         while (1);
+    fibonacci[0] = 0;
+     if ( n >= 2) fibonacci[1] = 1;
+     for (int i =2; i < n; i++){
+     | | fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
+     }
+    // Imprimir a sequencia dos números
+    printf("Sequencia de Fibonacci 
         }
         case '2': {
             // Código para calcular fatoriais aqui
