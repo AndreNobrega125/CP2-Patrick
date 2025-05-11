@@ -40,7 +40,9 @@ switch (opcao) {
      | | fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
      }
     // Imprimir a sequencia dos números
-    printf("Sequencia de Fibonacci 
+    printf("Sequencia de Fibonacci ^com %d termos: \n" , n);
+     for (int i = 0; i < n; i++) {
+     | | printf"int i = 0; i < n; i++");
         }
         case '2': {
             // Código para calcular fatoriais aqui
