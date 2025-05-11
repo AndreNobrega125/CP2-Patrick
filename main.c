@@ -15,13 +15,15 @@ int main() {
     scanf(" %c", &opcao);
 switch (opcao) { 
  case '1': {
-     do {    
+     do {
+         //Loop para garabtur entrada válida
          printf("Digite a quantidade de termos da sequencia de Fibonacci (1 a 50): ");
-         //Verificar se a entrada é um número
+        //Verificar se a entrada é um número
         if (scanf("%d", &n) != 1){
            //Limpa o buffer de entrada se o usuário digitou algo não numérico
          while (getchar() != '\n');
-         printf("Numero invalido. Deve ser entre 1 e 50.\n");
+         printf("Entrada invalido. Deve ser entre 1 e 50.\n");
+        continue; //Volta ao inicio do loop
             if (n < 1 || n > 50) {
              
             }
