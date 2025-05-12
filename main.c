@@ -13,39 +13,37 @@ int main() {
     printf("4 - Verificar Substring.\n");
     printf("Escolha uma opção (1/2/3/4): ");
     scanf(" %c", &opcao);
-switch (opcao) { 
- case '1': {
-     do {
-         //Loop para garabtur entrada válida
-         printf("Digite a quantidade de termos da sequencia de Fibonacci (1 a 50): ");
-        //Verificar se a entrada é um número
-        if (scanf("%d", &n) != 1){
-        //Limpa o buffer de entrada se o usuário digitou algo não numérico
-         while (getchar() != '\n');
-         printf("Entrada invalido. Deve ser entre 1 e 50.\n");
-        continue; //Volta ao inicio do loop
-        }
-        //Verificar se está no intervalo permitido
-        if (n < 1 || n > 50) {
-            printf("Número inválido. ");
-        } 
-        else {
-             break; //Sai do loop se a entrada for valida conforme pedido. 
+
+    switch (opcao) { 
+        case '1': {
+            do {
+                printf("Digite a quantidade de termos da sequencia de Fibonacci (1 a 50): ");
+                if (scanf("%d", &n) != 1) {
+                    while (getchar() != '\n');
+                    printf("Entrada invalida. Deve ser entre 1 e 50.\n");
+                    continue;
+                }
+                if (n < 1 || n > 50) {
+                    printf("Número inválido. ");
+                } 
+                else {
+                    break;
+                }
+            } while(1);
+
+            int fibonacci[50];
+            fibonacci[0] = 0;
+            if (n >= 2) fibonacci[1] = 1;
+            for (int i = 2; i < n; i++) {
+                fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
             }
-     } while(1);
-    int fibonacci[50];
-    fibonacc[0] = 0;
-         if (n >= 2) fibonacci[1] = 1;
-     for (int i =2; i < n; i++){
-         fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
-     }
-    // Imprimir a sequencia dos números
-    printf("Sequencia de Fibonacci ^com %d termos: \n" , n);
-     for (int i = 0; i < n; i++) {
-         printf(" %d", fibonacci[i]);
+            printf("Sequencia de Fibonacci com %d termos: \n", n);
+            for (int i = 0; i < n; i++) {
+                printf(" %d", fibonacci[i]);
+            }
+            printf("\n");
+            break;
         }
-     printf("\n");
-     break;
         case '2': {
             // Código para calcular fatoriais aqui
             break;
