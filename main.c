@@ -83,12 +83,12 @@ int main() {
             break;
         
         case '3': 
-          printf('Digite uma palavra: ');
+          printf("Digite uma palavra: ");
           scanf('%s', palavra); //Lê a palavra do usuário
           if (verificar_palindromo(palavra)) {
-            printf('A palavra é um palíndromo. \n');
+            printf("A palavra é um palíndromo. \n");
           } else {
-            printf('A palavra não é um palíndromo. \n);
+            printf("A palavra não é um palíndromo. \n");
           }
             break;
         
