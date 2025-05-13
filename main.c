@@ -22,7 +22,8 @@ void Fatoriais() {
 
 //------------------------------------------------------------
 //case 3 (introdução):
-      int verificar_palindromo(char palavra[]) {
+      int verificar_palindromo() {
+        char palavra[TAM]; 
             int inicio = 0;
             int fim = strlen(palavra) - 1;
             while (inicio < fim) {
