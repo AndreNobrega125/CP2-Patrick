@@ -98,16 +98,17 @@ int main() {
             break;
         
         case '4': {
-           char str1[100], str2[100];
-          printf("Digite a primeira string: ");
-          fgets(str1,100, stdin);
+          char str1[100], str2[100];
+          while (getchar() != '\n');
+          printf("Digite a primeira string: \n");
+          fgets(str1, 100, stdin);
           str1[strcspn(str1, "\n")] = '\0'; // Remover a nova linha
           
           printf("Digite a segunda string:");
           fgets(str2, 100, stdin);
           str2[strcspn(str2, "\n")] = '\0';
 
-          if (strstr(str1, str2) != NULL) {
+          if (strstr(str1, str2)) {
             printf("A segunda string está contida na primeira. \n");
           } else {
             printf("A segunda string não está contida na primeira. \n");
