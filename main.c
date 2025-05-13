@@ -101,9 +101,12 @@ int main() {
           printf("Digite a segunda string:");
           fgets(str2, 100, stdin);
           str2[strcspn(str2, "\n")] = '\0';
-          
 
-          
+          if (strstr(str1, str2) != NULL) {
+            printf("A segunda string está contida na primeira. \n");
+          } else {
+            printf("A segunda string não está contida na primeira. \n");
+          }
             break;
         } 
         default:
