@@ -84,7 +84,7 @@ int main() {
         
         case '3': 
           printf("Digite uma palavra: ");
-          scanf('%s', palavra); //Lê a palavra do usuário
+          scanf("%s", palavra); //Lê a palavra do usuário
           if (verificar_palindromo(palavra)) {
             printf("A palavra é um palíndromo. \n");
           } else {
