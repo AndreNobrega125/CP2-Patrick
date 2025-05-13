@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+//case 2:
 void Fatoriais() {
                 int N;
                 unsigned long long fat[20];
@@ -97,6 +97,11 @@ int main() {
           printf("Digite a primeira string: ");
           fgets(str1,100, stdin);
           str[strcspn(str1, "\n")] = '\0'; // Remover a nova linha
+          
+          printf("Digite a segunda string:");
+          fgets(str2, 100, stdin);
+          str2[strcspn(str2, "\n")] = '\0';
+          
 
           
             break;
