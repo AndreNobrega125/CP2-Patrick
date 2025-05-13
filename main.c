@@ -1,6 +1,7 @@
 //Integrantes do grupo: André Ayello de Nobrega RM561754, André Gouveia de Lima RM564219 e Mirella Mascarenhas RM562092
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void Fatoriais() {
                 int N;
@@ -92,7 +93,12 @@ int main() {
             break;
         
         case '4': {
-            // Código para verificar substring aqui
+           char str1[100], str2[100];
+          printf("Digite a primeira string: ");
+          fgets(str1,100, stdin);
+          str[strcspn(str1, "\n")] = '\0'; // Remover a nova linha
+
+          
             break;
         } 
         default:
