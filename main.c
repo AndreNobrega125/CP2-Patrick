@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 //case 2:
 void Fatoriais() {
                 int N;
@@ -22,6 +23,7 @@ void Fatoriais() {
 
 //------------------------------------------------------------
 //case 3 (introdução):
+#define MAX_TAM 100 
 void verificarPalindromo() {
     char palavra[MAX_TAM];
     int i, tamanho, ehPalindromo = 1;
