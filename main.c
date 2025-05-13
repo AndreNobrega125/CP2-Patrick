@@ -22,19 +22,27 @@ void Fatoriais() {
 
 //------------------------------------------------------------
 //case 3 (introdução):
-      int verificar_palindromo() {
-        char palavra[TAM]; 
-            int inicio = 0;
-            int fim = strlen(palavra) - 1;
-            while (inicio < fim) {
-              if (palavra[inicio] != palavra[fim]) {
-                return 0; //Não é um palíndromo
-              }
-              inicio++;
-              fim--;
-            }
-            return 1; //É um palíndromo
-          }
+void verificarPalindromo() {
+    char palavra[MAX_TAM];
+    int i, tamanho, ehPalindromo = 1;
+
+    printf("Digite uma palavra: ");
+    scanf("%s", palavra);
+
+    tamanho = strlen(palavra);
+
+    for (i = 0; i < tamanho / 2; i++) {
+        if (tolower(palavra[i]) != tolower(palavra[tamanho - 1 - i])) {
+            ehPalindromo = 0;
+            break;
+        }
+    }
+
+    if (ehPalindromo)
+        printf("A palavra é um palíndromo.\n");
+    else
+        printf("A palavra NÃO é um palíndromo.\n");
+}
 //------------------------------------------------------------
 
 int main() {
@@ -84,13 +92,7 @@ int main() {
             break;
         
         case '3': 
-          printf("Digite uma palavra: ");
-          scanf("%s", palavra); //Lê a palavra do usuário
-          if (verificar_palindromo(palavra)) {
-            printf("A palavra é um palíndromo. \n");
-          } else {
-            printf("A palavra não é um palíndromo. \n");
-          }
+          verificarPalindromo();
             break;
         
         case '4': {
