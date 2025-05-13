@@ -100,7 +100,7 @@ int main() {
         case '4': {
           char str1[100], str2[100];
           while (getchar() != '\n');
-          printf("Digite a primeira string: \n");
+          printf("Digite a primeira string: ");
           fgets(str1, 100, stdin);
           str1[strcspn(str1, "\n")] = '\0'; // Remover a nova linha
           
