@@ -18,6 +18,23 @@ void Fatoriais() {
                     }
                     printf("%d! = %llu\n", i, fat[i - 1]);
             } }
+
+//------------------------------------------------------------
+//case 3 (introdução):
+      int verificar_palindromo(char palavra[]) {
+            int inicio = 0;
+            int fim = strlen(palavra) - 1;
+            while (inicio < fim) {
+              if (palavra[inicio] != palavra[fim]) {
+                return 0; //Não é um palíndromo
+              }
+              inicio++;
+              fim--;
+            }
+            return 1; //É um palíndromo
+          }
+//------------------------------------------------------------
+
 int main() {
     char opcao;
     int n;
@@ -64,10 +81,16 @@ int main() {
             Fatoriais();
             break;
         
-        case '3': {
-            // Código para verificar palíndromo aqui
+        case '3': 
+          printf('Digite uma palavra: ');
+          scanf('%s', palavra); //Lê a palavra do usuário
+          if (verificar_palindromo(palavra)) {
+            printf('A palavra é um palíndromo. \n');
+          } else {
+            printf('A palavra não é um palíndromo. \n);
+          }
             break;
-        }
+        
         case '4': {
             // Código para verificar substring aqui
             break;
