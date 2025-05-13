@@ -44,8 +44,23 @@ int main() {
             printf("\n");
             break;
         }
-        case '2': {
-            // Código para calcular fatoriais aqui
+        case '2': { 
+            void Fatoriais() {
+                int N;
+                unsigned long long fat[20];
+                printf("Digite um número inteiro de 1 a 20:");
+                scanf("%d", &N);
+                if (N < 1 || N > 20) {
+                    printf("Valor inválido!\n");
+                    return;
+                }
+                for (int i = 1; i <= N; i++) {
+                    fat[i - 1] = 1;
+                    for (int j = 2; j <= i; j++) {
+                        fat[i - 1] *= j;
+                    }
+                    printf("%d! = %||u\n", i, fat[i - 1]);
+                }
             break;
         }
         case '3': {
@@ -60,4 +75,5 @@ int main() {
             printf("Opcao invalida. Tente novamente.\n");
     }
     return 0;
-}
+    
+} }
